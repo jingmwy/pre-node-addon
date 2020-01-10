@@ -8,7 +8,8 @@
     "test": "node index.js",
     "build": "node-pre-gyp rebuild --build-from-source",
     "build-ia32": "node-pre-gyp rebuild --build-from-source --target_arch=ia32",
-    "package": "node-pre-gyp package"
+    "package": "node-pre-gyp package",
+    "package-ia32": "node-pre-gyp package --target_arch=ia32"
   },
   "keywords": [
     "node-pre-gyp"
