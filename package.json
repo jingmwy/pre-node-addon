@@ -1,0 +1,31 @@
+{
+  "name": "pre-addon-node",
+  "version": "1.0.0",
+  "description": "a pre-gyp Node module",
+  "main": "index.js",
+  "scripts": {
+    "install": "node-pre-gyp install --fallback-to-build",
+    "test": "node index.js",
+    "build": "node-pre-gyp rebuild --build-from-source",
+    "build-ia32": "node-pre-gyp rebuild --build-from-source --target_arch=ia32",
+    "package": "node-pre-gyp package"
+  },
+  "keywords": [
+    "node-pre-gyp"
+  ],
+  "author": "qiuch",
+  "license": "ISC",
+  "dependencies": {
+    "node-pre-gyp": "^0.14.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.600.0"
+  },
+  "binary": {
+    "module_name": "pre_addon",
+    "module_path": "./lib/binding/{configuration}/{node_abi}-{platform}-{arch}/",
+    "remote_path": "./",
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "127.0.0.1:8080"
+  }
+}
