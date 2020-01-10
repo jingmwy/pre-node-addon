@@ -1,5 +1,5 @@
 {
-  "name": "pre-addon-node",
+  "name": "pre-node-addon",
   "version": "1.0.0",
   "description": "a pre-gyp Node module",
   "main": "index.js",
